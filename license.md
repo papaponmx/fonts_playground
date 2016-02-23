@@ -1,4 +1,4 @@
-Some of them come from http://dafont.com and others are google fonts. Their licenses allow non-comercial use.
+Here you can find a lot of fonts, some of them come from http://dafont.com and others are google fonts. Their licenses allow non-comercial use.
 
 All of this are free stock images, except for the one of dd.jpg, which is not allowed for commercial use.
 
