@@ -14,6 +14,8 @@ $white: #ccc;
 $wine: #a61119;
 $text-color: rgb(226, 221, 221);
 $transparent: rgba(255, 255, 255, 0);
+$old-brown: rgba(41, 25, 1, 0.98);
+$old-paper: #F8ECC2;
 
 
 $font-one: 'Pacifico', cursive;
@@ -43,13 +45,31 @@ $font-eight: 'Ubuntu', sans-serif;
 {
     font-family: captain;
 
-    src: url('da_fonts/American Captain.otf');
+    src: url('da_fonts/AmericanCaptain.ttf');
+
 }
+@font-face {
+    font-family: harry;
+
+    src:
+    url('da_fonts/HARRYP__.TTF');
+}
+
+//Dominica
+@font-face {
+    font-family: dominica;
+
+    src:
+    url('da_fonts/DOMIISC__.TTF');
+}
+
+
+
 
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 //mixins & functions
-@mixin make-a-div($bg-color, $color, $font)
+@mixin make-a-div($bg-color, $color, $font) //bgcolor, font color, and font family
 {
     display: flex;
     flex-direction: column;
@@ -104,8 +124,12 @@ a {
   color: $color-one;
   text-decoration: none;
 }
-a:hover{
+a:hover, .button-start a:hover{
   color: $black;
+}
+
+.button ,#btn-one:hover, #btn-two:hover {
+  color: $color-one
 }
 
 
@@ -218,5 +242,18 @@ a:hover{
         text-shadow: 4px 2px #000;
 
         @include font-size(48px);
+    }
+}
+
+#container-five
+{
+    @include make-a-div($old-paper, white,
+    dominica);
+    @include bg-img( rgba(80, 58, 0, 0.8), rgb(22, 12, 0), 'img/rome.jpg');
+    h1
+    {
+        text-shadow: 2px 2px #000, -2px -2px #000;
+
+
     }
 }
