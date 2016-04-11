@@ -1,124 +1,14 @@
+
+
+@import "scss/variables";
+// Mixins & functions
+@import "scss/mixins";
+
 body
 {
     margin: 0;
 }
 
-
-//colors
-$color-one: #e8e183;
-$color-two: #c62e2e;
-$color-three: #1c1f1c;
-$color-four: #7a6714;
-$black: #222;
-$white: #ccc;
-$wine: #a61119;
-$text-color: rgb(226, 221, 221);
-$transparent: rgba(255, 255, 255, 0);
-$old-brown: rgba(41, 25, 1, 0.98);
-$old-paper: #F8ECC2;
-
-
-$font-one: 'Pacifico', cursive;
-$font-two: 'Indie Flower', cursive;
-$font-three: 'Lobster', cursive;
-$font-four: thirdFont;
-$font-five: hand;
-$font-six: captain;
-$font-seven: 'Crafty Girls', cursive;
-$font-cover: 'Fugaz One', cursive;
-$font-text: 'Montserrat', sans-serif;
-$font-eight: 'Ubuntu', sans-serif;
-
-@font-face
-{
-    font-family: thirdFont;
-
-    src: url('da_fonts/typewcond_demi.otf');
-}
-@font-face
-{
-    font-family: hand;
-
-    src: url('da_fonts/Fontscafe_HandShopTypography-C30_demo.ttf');
-}
-@font-face
-{
-    font-family: captain;
-
-    src: url('da_fonts/AmericanCaptain.ttf');
-
-}
-@font-face {
-    font-family: harry;
-
-    src:
-    url('da_fonts/HARRYP__.TTF');
-}
-
-//Dominica
-@font-face {
-    font-family: dominica;
-
-    src:
-    url('da_fonts/DOMIISC__.TTF');
-}
-
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
-
-//mixins & functions
-@mixin make-a-div($bg-color, $color, $font) //bgcolor, font color, and font family
-{
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    height: 100vh;
-
-    background-color: $bg-color;
-
-    justify-content: center;
-    h1
-    {
-        font-family: $font;
-
-        color: $color;
-
-        align-self: center;
-        @include font-size(108px);
-    }
-}
-
-@mixin bg-img ($first, $second, $src)
-{
-    background: linear-gradient(to bottom, $first 0%, $second 100%), url($src);
-    background-position: center;
-    background-size: cover;
-}
-
-@function calculateRem($size)
-{
-    $remSize: $size / 16px;
-    @return $remSize * 1rem;
-}
-@mixin font-size($size)
-{
-    font-size: $size;
-    font-size: calculateRem($size);
-}
-
-
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
-@import url(https://fonts.googleapis.com/css?family=Crafty+Girls);
-@import url(https://fonts.googleapis.com/css?family=Fugaz+One);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 a {
   color: $color-one;
@@ -133,6 +23,14 @@ a:hover, .button-start a:hover{
 }
 
 
+// Fonts declarations
+@import "scss/fonts";
+
+
+
+
+
+
 .cover
 {
     @include make-a-div($wine, $color-one, $font-cover);
@@ -142,12 +40,12 @@ a:hover, .button-start a:hover{
 
         text-shadow: 5px 2px black;
     }
-    h2
+    #cover-p
     {
         font-family: $font-eight;
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-stretch: condensed;
-        line-height: 1.4em;
+        line-height: 1.5em;
 
         max-width: 75%;
 
@@ -156,6 +54,7 @@ a:hover, .button-start a:hover{
         color: $text-color;
 
         align-self: center;
+        text-shadow: .5px .5px black;
     }
 
     div {
@@ -199,7 +98,8 @@ a:hover, .button-start a:hover{
       background-color: $color-one;
     }
   }
-}
+} // end .cover
+
 
 #container
 {
@@ -207,6 +107,14 @@ a:hover, .button-start a:hover{
     h1
     {
         text-shadow: 4px 8px #555;
+    }
+    h2 {
+      align-self: center;
+      font-style: italic;
+      color: #555;
+      padding-top: 2em;
+      font-size: 1.2em;
+      font-weight: 200;
     }
 }
 #container-two
@@ -232,6 +140,15 @@ a:hover, .button-start a:hover{
 
         text-shadow: 3px 0 #000;
     }
+    h2 {
+      align-self: center;
+      font-size: 1.3em;
+      color: lighten(black, 25%);
+      font-style: oblique;
+      letter-spacing: .2px;
+      font-weight: 300;
+    }
+
 }
 #container-four
 {
@@ -257,3 +174,83 @@ a:hover, .button-start a:hover{
 
     }
 }
+#container-six {
+    @include make-a-div (gray, white, arial);
+    line-height: 6em;
+  #theFonts {
+    font-weight: 100;
+    font-family: cursive;
+    text-shadow: 2px 2px darken(gray, 20%);
+  }
+  #can {
+    font-size: .5em;
+    font-weight: 200;
+  }
+  #impact {
+    font-size: 1.2em;
+    font-weight: 800;
+    text-shadow: 2px 2px lighten(gray, 20%), -2px 2px lighten(gray, 20%), 0px -2px lighten(gray, 20%) ;
+    color: darken(gray, 40%);
+  }
+}
+#container-seven {
+  @include make-a-div ($blue, white);
+  h1 {
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 3px 3px darken($blue, 20%);
+
+  }
+  #first {
+    font-family: blackops;
+    padding-bottom: 2em;
+  }
+  #second {
+    font-family: $font-eight;
+    font-weight: 200;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+}
+
+#container-eight{
+  @include make-a-div ( $strawberry, white, $myStory);
+  h1 {
+    text-shadow: 3px 3px black;
+    //text-transform: uppercase;
+  }
+}
+//Buttons
+
+
+.down-btn {
+  width: 8em;
+  align-self: center;
+  cursor: pointer;
+}
+.down-btn:hover {
+  background-color: rgba(227, 224, 221, 0.5);
+  border-radius: 100%;
+  box-shadow: 3px 3px gray;
+}
+
+.up-btn {
+  text-align: center;
+  background-color: rgba(227, 224, 221, 0.45);
+
+  //height: 5em;
+  color: tomato;
+  font-weight: bolder;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  padding: 1em;
+  }
+  .up-btn:hover {
+    background-color: white;
+  }
+
+  #my-site, a {
+    font-size: .8em;
+    font-style: italic;
+  }

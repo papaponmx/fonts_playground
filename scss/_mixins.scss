@@ -1,0 +1,40 @@
+
+//mixins & functions
+@mixin make-a-div($bg-color, $color, $font: inherit) //bgcolor, font color, and font family
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 102vh;
+
+    background-color: $bg-color;
+    justify-content: center;
+    h1
+    {
+        font-family: $font;
+
+        color: $color;
+
+        align-self: center;
+        @include font-size(108px);
+    }
+}
+
+@mixin bg-img ($first, $second, $src)
+{
+    background: linear-gradient(to bottom, $first 0%, $second 100%), url($src);
+    background-position: center;
+    background-size: cover;
+}
+
+@function calculateRem($size)
+{
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+@mixin font-size($size)
+{
+    font-size: $size;
+    font-size: calculateRem($size);
+}

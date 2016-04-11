@@ -1,5 +1,22 @@
 # fonts_playground
 
+## TODO
+
+
+### DONE
+
+  TODAY
+  The .scss were made modular
+  Added a few divs
+  Fixed the h3 in .cover
+  Added a dynamic link based on jQuery for .down-btn
+  Fix back to top
+
+### YESTERDAY
+
+
+
+
 This is a website I use to experiment with fonts, colors and CSS3 features. You can find it in http://playground.riosjaime.com
 
 

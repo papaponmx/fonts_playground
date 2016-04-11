@@ -9,6 +9,29 @@ body {
   margin: 0;
 }
 
+a {
+  color: #e8e183;
+  text-decoration: none;
+}
+
+a:hover, .button-start a:hover {
+  color: #222;
+}
+
+.button, #btn-one:hover, #btn-two:hover {
+  color: #e8e183;
+}
+
+@font-face {
+  font-family: blackops;
+  src: url("da_fonts/Black_Ops_One/BlackOpsOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: myStory;
+  src: url("da_fonts/DJB Gonna Share My Story.ttf");
+}
+
 @font-face {
   font-family: thirdFont;
   src: url("da_fonts/typewcond_demi.otf");
@@ -34,24 +57,11 @@ body {
   src: url("da_fonts/DOMIISC__.TTF");
 }
 
-a {
-  color: #e8e183;
-  text-decoration: none;
-}
-
-a:hover, .button-start a:hover {
-  color: #222;
-}
-
-.button, #btn-one:hover, #btn-two:hover {
-  color: #e8e183;
-}
-
 .cover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   background-color: #a61119;
   justify-content: center;
 }
@@ -69,15 +79,16 @@ a:hover, .button-start a:hover {
   text-shadow: 5px 2px black;
 }
 
-.cover h2 {
+.cover #cover-p {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-stretch: condensed;
-  line-height: 1.4em;
+  line-height: 1.5em;
   max-width: 75%;
   letter-spacing: .5px;
   color: #e2dddd;
   align-self: center;
+  text-shadow: .5px .5px black;
 }
 
 .cover div {
@@ -122,7 +133,7 @@ a:hover, .button-start a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   background-color: #e8e183;
   justify-content: center;
 }
@@ -139,6 +150,15 @@ a:hover, .button-start a:hover {
   text-shadow: 4px 8px #555;
 }
 
+#container h2 {
+  align-self: center;
+  font-style: italic;
+  color: #555;
+  padding-top: 2em;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
 #container-two {
   background: linear-gradient(to bottom, rgba(4, 3, 25, 0.75) 0%, #040319 100%), url("img/dd.jpg");
   background-position: center;
@@ -146,7 +166,7 @@ a:hover, .button-start a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   background-color: black;
   justify-content: center;
 }
@@ -166,7 +186,7 @@ a:hover, .button-start a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   background-color: #111;
   justify-content: center;
 }
@@ -185,11 +205,20 @@ a:hover, .button-start a:hover {
   text-shadow: 3px 0 #000;
 }
 
+#container-three h2 {
+  align-self: center;
+  font-size: 1.3em;
+  color: #404040;
+  font-style: oblique;
+  letter-spacing: .2px;
+  font-weight: 300;
+}
+
 #container-four {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   background-color: #f656b1;
   justify-content: center;
   background: linear-gradient(to bottom, rgba(217, 24, 180, 0.2) 0%, rgba(217, 24, 180, 0.2) 100%), url("img/car.jpg");
@@ -215,8 +244,8 @@ a:hover, .button-start a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
-  background-color: #F8ECC2;
+  height: 102vh;
+  background-color: #f8ecc2;
   justify-content: center;
   background: linear-gradient(to bottom, rgba(80, 58, 0, 0.8) 0%, #160c00 100%), url("img/rome.jpg");
   background-position: center;
@@ -233,4 +262,128 @@ a:hover, .button-start a:hover {
 
 #container-five h1 {
   text-shadow: 2px 2px #000, -2px -2px #000;
+}
+
+#container-six {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 102vh;
+  background-color: gray;
+  justify-content: center;
+  line-height: 6em;
+}
+
+#container-six h1 {
+  font-family: arial;
+  color: white;
+  align-self: center;
+  font-size: 108px;
+  font-size: 6.75rem;
+}
+
+#container-six #theFonts {
+  font-weight: 100;
+  font-family: cursive;
+  text-shadow: 2px 2px #4d4d4d;
+}
+
+#container-six #can {
+  font-size: .5em;
+  font-weight: 200;
+}
+
+#container-six #impact {
+  font-size: 1.2em;
+  font-weight: 800;
+  text-shadow: 2px 2px #b3b3b3, -2px 2px #b3b3b3, 0px -2px #b3b3b3;
+  color: #1a1a1a;
+}
+
+#container-seven {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 102vh;
+  background-color: #5cb7de;
+  justify-content: center;
+}
+
+#container-seven h1 {
+  font-family: inherit;
+  color: white;
+  align-self: center;
+  font-size: 108px;
+  font-size: 6.75rem;
+}
+
+#container-seven h1 {
+  text-align: center;
+  font-size: 4em;
+  text-shadow: 3px 3px #2486b0;
+}
+
+#container-seven #first {
+  font-family: blackops;
+  padding-bottom: 2em;
+}
+
+#container-seven #second {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 200;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+#container-eight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 102vh;
+  background-color: #cc2857;
+  justify-content: center;
+}
+
+#container-eight h1 {
+  font-family: myStory;
+  color: white;
+  align-self: center;
+  font-size: 108px;
+  font-size: 6.75rem;
+}
+
+#container-eight h1 {
+  text-shadow: 3px 3px black;
+}
+
+.down-btn {
+  width: 8em;
+  align-self: center;
+  cursor: pointer;
+}
+
+.down-btn:hover {
+  background-color: rgba(227, 224, 221, 0.5);
+  border-radius: 100%;
+  box-shadow: 3px 3px gray;
+}
+
+.up-btn {
+  text-align: center;
+  background-color: rgba(227, 224, 221, 0.45);
+  color: tomato;
+  font-weight: bolder;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  padding: 1em;
+}
+
+.up-btn:hover {
+  background-color: white;
+}
+
+#my-site, a {
+  font-size: .8em;
+  font-style: italic;
 }

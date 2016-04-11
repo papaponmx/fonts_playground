@@ -2,21 +2,48 @@
 doctype html
 html(lang=en)
   head
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css' rel='stylesheet')
     link(href='/styles.css', rel='stylesheet')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js')
+    script(src='/app.js' async)
   body
-    .cover.pure-g
-     h1.pure-u-5-5 Welcome to the play ground.
-     h2 This playground is a space used to play with fonts, CSS effects and backgrounds. Look trough the fonts. How does it make you feel? What about the colors? It is all yours to explore.
-     a.pure-button(href="#")
+    .cover#cover
+     h1 Welcome to the play ground.
+
+     #cover-p 
+       p This is an illustrative page created for educational purposes. My goal is to provide you with visual examples of how the combination of fonts, CSS3 properties and colors can convey different messages. <br><br> Look through the fonts. How does it make you feel? What about the colors? It is all yours to explore.<br><br> 
+         span#my-site A project by: 
+         a(href='http://riosjaime.com') Jaime Rios
+      img(src='img/down.png').down-btn(href="#container-six")
         
     a(name="A")
-     #container.container
+    #container-six.container
+      h1 
+        span#theFonts Typography<br>
+        span#can CAN MAKE AN <br>
+        span#impact IMPACT 
+      img(src='img/down.png').down-btn(href="#container-six")
+
+    #container-seven.container
+       h1#first Fonts can change the message
+       h1#second Fonts can change the message
+       img(src='img/down.png').down-btn(href="#container-six")
+ 
+    #container-eight.container
+      h1  Strawberries
+      img(src='img/down.png').down-btn(href="#container-six")
+    #container.container
       h1#somethingonpage Good Old Days
+      h2 When life used to go smooth
+      img(src='img/down.png').down-btn(href="#container-six")
     #container-two.container
       h1 Dream like a child
+      img(src='img/down.png').down-btn(href="#container-six")
     #container-three.container
       h1 Be the man
+      h2 Pay attention to the image in the background
+      img(src='img/down.png').down-btn(href="#container-six")
     #container-four.container
-      h1 You can't blame gravity for falling in love
-    #container-five.container
-      h1  EMPEROR
+      h1 You can't blame gravity for falling in love 
+      img(src='img/home.png').down-btn.up-btn(href="#container-six")
+    //  p.down-btn(href="#container") Back to top
